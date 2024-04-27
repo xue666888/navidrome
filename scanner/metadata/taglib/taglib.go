@@ -53,8 +53,8 @@ func (e *Extractor) extractMetadata(filePath string) (metadata.ParsedTags, error
 		delete(tags, "lengthinmilliseconds")
 	}
 	// Adjust some ID3 tags
-	parseTIPL(tags)
-	delete(tags, "tmcl") // TMCL is already parsed by TagLib
+	//parseTIPL(tags)
+	//delete(tags, "tmcl") // TMCL is already parsed by TagLib
 
 	return tags, nil
 }

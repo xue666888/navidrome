@@ -1,0 +1,144 @@
+# Adapted from https://picard-docs.musicbrainz.org/downloads/MusicBrainz_Picard_Tag_Map.html
+---
+acoustid_id:
+  aliases: [ TXXX:Acoustid Id,    ACOUSTID_ID, ----:com.apple.iTunes:Acoustid Id, Acoustid/Id ]
+acoustid_fingerprint:
+  aliases: [ TXXX:Acoustid Fingerprint, ACOUSTID_FINGERPRINT, ----:com.apple.iTunes:Acoustid Fingerprint, Acoustid/Fingerprint ]
+album:
+  aliases: [ TALB, ALBUM, ©alb, WM/AlbumTitle, IPRD ]
+albumartist:
+  aliases: [ TPE2, ALBUMARTIST, Album Artist, aART, WM/AlbumArtist ]
+albumartistsort:
+  aliases: [ TSO2, TXXX:ALBUMARTISTSORT, ALBUMARTISTSORT, soaa, WM/AlbumArtistSortOrder ]
+albumsort:
+  aliases: [ TSOA, ALBUMSORT, soal, WM/AlbumSortOrder ]
+arranger:
+  aliases: [ TIPL:arranger, IPLS:arranger, ARRANGER ]
+artist:
+  aliases: [ TPE1, ARTIST, ©ART, Author, IART ]
+artists:
+  aliases: [ TXXX:ARTISTS, ARTISTS, ----:com.apple.iTunes:ARTISTS, WM/ARTISTS ]
+asin:
+  aliases: [ TXXX:ASIN, ASIN, ----:com.apple.iTunes:ASIN ]
+barcode:
+  aliases: [ TXXX:BARCODE, BARCODE, ----:com.apple.iTunes:BARCODE, WM/Barcode ]
+bpm:
+  aliases: [ TBPM, BPM, tmpo, WM/BeatsPerMinute ]
+catalognumber:
+  aliases: [ TXXX:CATALOGNUMBER, CATALOGNUMBER, ----:com.apple.iTunes:CATALOGNUMBER, WM/CatalogNo ]
+comment:
+  aliases: [ COMM:description, COMMENT, ©cmt, Description, ICMT ]
+compilation:
+  aliases: [ TCMP, COMPILATION, cpil, WM/IsCompilation ]
+composer:
+  aliases: [ TCOM, COMPOSER, ©wrt, WM/Composer, IMUS ]
+composersort:
+  aliases: [ TSOC, TXXX:COMPOSERSORT, COMPOSERSORT, soco, WM/ComposerSortOrder ]
+conductor:
+  aliases: [ TPE3, CONDUCTOR, ----:com.apple.iTunes:CONDUCTOR, WM/Conductor ]
+copyright:
+  aliases: [ TCOP, COPYRIGHT, cprt, ICOP ]
+director:
+  aliases: [ TXXX:DIRECTOR, DIRECTOR, ©dir, WM/Director ]
+discnumber:
+  aliases: [ TPOS, DISCNUMBER, disk, WM/PartOfSet ]
+  split: totaldiscs
+discsubtitle:
+  aliases: [ TSST, DISCSUBTITLE, ----:com.apple.iTunes:DISCSUBTITLE, WM/SetSubTitle ]
+encodedby:
+  aliases: [ TENC, ENCODEDBY, ©too, WM/EncodedBy, IENC ]
+encodersettings:
+  aliases: [ TSSE, ENCODERSETTINGS, ----:com.apple.iTunes:ENCODERSETTINGS, WM/EncodingSettings ]
+engineer:
+  aliases: [ TIPL:engineer, IPLS:engineer, ENGINEER, ----:com.apple.iTunes:ENGINEER, WM/Engineer, IENG ]
+gapless:
+  aliases: [ gapless, pgap ]
+genre:
+  aliases: [ TCON, GENRE, ©gen, WM/Genre, IGNR ]
+grouping:
+  aliases: [ GRP1, GROUPING, ©grp, WM/ContentGroupDescription ]
+key:
+  aliases: [ TKEY, ----:com.apple.iTunes:initialkey, WM/InitialKey ]
+isrc:
+  aliases: [ TSRC, ISRC, ----:com.apple.iTunes:ISRC, WM/ISRC ]
+language:
+  aliases: [ TLAN, LANGUAGE, ----:com.apple.iTunes:LANGUAGE, WM/Language, ILNG ]
+license:
+  aliases: [ WCOP, TXXX:LICENSE, LICENSE, ----:com.apple.iTunes:LICENSE ]
+lyricist:
+  aliases: [ TEXT, LYRICIST, ----:com.apple.iTunes:LYRICIST, WM/Writer ]
+lyrics:
+  aliases: [ USLT:description, LYRICS, ©lyr, WM/Lyrics ]
+media:
+  aliases: [ TMED, MEDIA, ----:com.apple.iTunes:MEDIA, WM/Media, IMED ]
+djmixer:
+  aliases: [ TIPL:DJ-mix, IPLS:DJ-mix, DJMIXER, ----:com.apple.iTunes:DJMIXER, WM/DJMixer ]
+mixer:
+  aliases: [ TIPL:mix, IPLS:mix, MIXER, ----:com.apple.iTunes:MIXER, WM/Mixer ]
+mood:
+  aliases: [ TMOO, MOOD, ----:com.apple.iTunes:MOOD, WM/Mood ]
+movement:
+  aliases: [ MVNM, MOVEMENTNAME, ©mvn ]
+movementtotal:
+  aliases: [ MOVEMENTTOTAL, mvc ]
+movementnumber:
+  aliases: [ MVIN(1), MOVEMENT, mvi ]
+musicbrainz_artistid:
+  aliases: [ TXXX:MusicBrainz Artist Id, MUSICBRAINZ_ARTISTID, MUSICBRAINZ ARTIST ID, ----:com.apple.iTunes:MusicBrainz Artist Id, MusicBrainz/Artist Id ]
+musicbrainz_discid:
+  aliases: [ TXXX:MusicBrainz Disc Id, MUSICBRAINZ_DISCID, MUSICBRAINZ DISC ID, ----:com.apple.iTunes:MusicBrainz Disc Id, MusicBrainz/Disc Id ]
+musicbrainz_recordingid:
+  aliases: [ UFID:http://musicbrainz.org, MUSICBRAINZ_TRACKID, MUSICBRAINZ TRACK ID, ----:com.apple.iTunes:MusicBrainz Track Id, MusicBrainz/Track Id ]
+musicbrainz_albumartistid:
+  aliases: [ TXXX:MusicBrainz Album Artist Id, MUSICBRAINZ_ALBUMARTISTID, MUSICBRAINZ ALBUM ARTIST ID, ----:com.apple.iTunes:MusicBrainz Album Artist Id, MusicBrainz/Album Artist Id ]
+musicbrainz_albumid:
+  aliases: [ TXXX:MusicBrainz Album Id, MUSICBRAINZ_ALBUMID, MUSICBRAINZ ALBUM ID, ----:com.apple.iTunes:MusicBrainz Album Id, MusicBrainz/Album Id ]
+musicbrainz_workid:
+  aliases: [ TXXX:MusicBrainz Work Id, MUSICBRAINZ_WORKID, MUSICBRAINZ WORK ID, ----:com.apple.iTunes:MusicBrainz Work Id, MusicBrainz/Work Id ]
+originaldate:
+  aliases: [ TDOR, TORY, ORIGINALDATE, ----:com.apple.iTunes:originaldate, WM/OriginalReleaseTime ]
+originalyear:
+  aliases: [ ORIGINALYEAR, ----:com.apple.iTunes:originalyear, WM/OriginalReleaseYear ]
+producer:
+  aliases: [ TIPL:producer, IPLS:producer, PRODUCER, ----:com.apple.iTunes:PRODUCER, WM/Producer, IPRO ]
+label:
+  aliases: [ TPUB, LABEL, ----:com.apple.iTunes:LABEL, WM/Publisher ]
+releasecountry:
+  aliases: [ TXXX:MusicBrainz Album Release Country, RELEASECOUNTRY, ----:com.apple.iTunes:MusicBrainz Album Release Country, MusicBrainz/Album Release Country, ICNT ]
+releasedate:
+  aliases: [ TDRC, TYER, TDAT, DATE, Year, ©day, WM/Year, ICRD ]
+releasestatus:
+  aliases: [ TXXX:MusicBrainz Album Status, RELEASESTATUS, MUSICBRAINZ_ALBUMSTATUS, ----:com.apple.iTunes:MusicBrainz Album Status, MusicBrainz/Album Status ]
+releasetype:
+  aliases: [ TXXX:MusicBrainz Album Type, RELEASETYPE, MUSICBRAINZ_ALBUMTYPE, ----:com.apple.iTunes:MusicBrainz Album Type, MusicBrainz/Album Type ]
+remixer:
+  aliases: [ TPE4, REMIXER, MixArtist, ----:com.apple.iTunes:REMIXER, WM/ModifiedBy ]
+replaygain_album_gain:
+  aliases: [ TXXX:REPLAYGAIN_ALBUM_GAIN, REPLAYGAIN_ALBUM_GAIN, ----:com.apple.iTunes:REPLAYGAIN_ALBUM_GAIN ]
+replaygain_album_peak:
+  aliases: [ TXXX:REPLAYGAIN_ALBUM_PEAK, REPLAYGAIN_ALBUM_PEAK, ----:com.apple.iTunes:REPLAYGAIN_ALBUM_PEAK ]
+replaygain_track_gain:
+  aliases: [ TXXX:REPLAYGAIN_TRACK_GAIN, REPLAYGAIN_TRACK_GAIN, ----:com.apple.iTunes:REPLAYGAIN_TRACK_GAIN ]
+replaygain_track_peak:
+  aliases: [ TXXX:REPLAYGAIN_TRACK_PEAK, REPLAYGAIN_TRACK_PEAK, ----:com.apple.iTunes:REPLAYGAIN_TRACK_PEAK ]
+script:
+  aliases: [ TXXX:SCRIPT, SCRIPT, ----:com.apple.iTunes:SCRIPT, WM/Script ]
+subtitle:
+  aliases: [ TIT3, SUBTITLE, ----:com.apple.iTunes:SUBTITLE, WM/SubTitle ]
+totaldiscs:
+  aliases: [ DISCTOTAL, TOTALDISCS ]
+totaltracks:
+  aliases: [ TRACKTOTAL, TOTALTRACKS ]
+tracknumber:
+  aliases: [ TRCK, TRACKNUMBER, trkn, WM/TrackNumber, ITRK ]
+  split: totaltracks
+title:
+  aliases: [ TIT2, TITLE, ©nam, INAM ]
+titlesort:
+  aliases: [ TSOT, TITLESORT, sonm, WM/TitleSortOrder ]
+website:
+  aliases: [ WOAR, WEBSITE, Weblink, WM/AuthorURL ]
+work:
+  aliases: [ TXXX:WORK, TIT1, WORK, ©wrk, WM/Work ]
+writer:
+  aliases: [ TXXX:Writer, WRITER, IWRI ]

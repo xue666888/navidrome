@@ -115,39 +115,58 @@ int taglib_read(const FILENAME_CHAR_T *filename, unsigned long id) {
 
           go_map_put_lyrics(id, language, val);
         }
-      } else if (kv.first == "SYLT") {
-        for (const auto &tag: kv.second) {
-          TagLib::ID3v2::SynchronizedLyricsFrame *frame = dynamic_cast<TagLib::ID3v2::SynchronizedLyricsFrame *>(tag);
-          if (frame == NULL) continue;
+//      } else if (kv.first == "SYLT") {
+//        for (const auto &tag: kv.second) {
+//          TagLib::ID3v2::SynchronizedLyricsFrame *frame = dynamic_cast<TagLib::ID3v2::SynchronizedLyricsFrame *>(tag);
+//          if (frame == NULL) continue;
+//
+//          const auto bv = frame->language();
+//          char language[4] = {'x', 'x', 'x', '\0'};
+//          if (bv.size() == 3) {
+//            strncpy(language, bv.data(), 3);
+//          }
+//
+//          const auto format = frame->timestampFormat();
+//          if (format == TagLib::ID3v2::SynchronizedLyricsFrame::AbsoluteMilliseconds) {
+//
+//            for (const auto &line: frame->synchedText()) {
+//              char *text = (char *)line.text.toCString(true);
+//              go_map_put_lyric_line(id, language, text, line.time);
+//            }
+//          } else if (format == TagLib::ID3v2::SynchronizedLyricsFrame::AbsoluteMpegFrames) {
+//            const int sampleRate = props->sampleRate();
+//
+//            if (sampleRate != 0) {
+//              for (const auto &line: frame->synchedText()) {
+//                const int timeInMs = (line.time * 1000) / sampleRate;
+//                char *text = (char *)line.text.toCString(true);
+//                go_map_put_lyric_line(id, language, text, timeInMs);
+//              }
+//            }
+//          }
+//        }
 
-          const auto bv = frame->language();
-          char language[4] = {'x', 'x', 'x', '\0'};
-          if (bv.size() == 3) {
-            strncpy(language, bv.data(), 3);
-          }
-
-          const auto format = frame->timestampFormat();
-          if (format == TagLib::ID3v2::SynchronizedLyricsFrame::AbsoluteMilliseconds) {
-
-            for (const auto &line: frame->synchedText()) {
-              char *text = (char *)line.text.toCString(true);
-              go_map_put_lyric_line(id, language, text, line.time);
-            }
-          } else if (format == TagLib::ID3v2::SynchronizedLyricsFrame::AbsoluteMpegFrames) {
-            const int sampleRate = props->sampleRate();
-
-            if (sampleRate != 0) {
-              for (const auto &line: frame->synchedText()) {
-                const int timeInMs = (line.time * 1000) / sampleRate;
-                char *text = (char *)line.text.toCString(true);
-                go_map_put_lyric_line(id, language, text, timeInMs);
-              }
-            }
-          }
-        }
       } else {
         if (!kv.second.isEmpty()) {
-          tags.insert(kv.first, kv.second.front()->toString());
+//                  tags.insert(kv.first, kv.second.front()->toString());
+
+//            char *key = ::strdup(kv.first.data());
+//            for (const auto &v: kv.second) {
+//              char *val = ::strdup(v->toString().toCString(true));
+//              go_map_put_str(id, key, val);
+//              free(val);
+//            }
+//            free(key);
+
+            char *key = ::strdup(kv.first.data());
+            for (const auto &second: kv.second) {
+              for (const auto &v: second->toStringList()) {
+                char *val = ::strdup(v.toCString(true));
+                go_map_put_str(id, key, val);
+                free(val);
+              }
+            }
+            free(key);
         }
       }
     }

@@ -9,6 +9,7 @@ import (
 	"github.com/navidrome/navidrome/model"
 	"github.com/navidrome/navidrome/model/request"
 	"github.com/navidrome/navidrome/scanner"
+	_ "github.com/navidrome/navidrome/scanner2/metadata"
 )
 
 type scanner2 struct {
